@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Félix Cases - Catálogo de Cases</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Félix Cases - Catálogo de Cases</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
             theme: {
                 extend: {
                     colors: {
@@ -26,513 +27,523 @@
                 }
             }
         }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #d946ef; /* Cor de fundo fúchsia */
-        }
-        
-        .title-font {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .sewing-pattern {
-            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%23e5e5e5" stroke-width="1"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23e5e5e5" stroke-width="0.5"/></svg>');
-            background-size: 20px 20px;
-            background-color: #d946ef; /* Cor de fundo fúchsia */
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .size-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .size-table th, .size-table td {
-            border: 1px solid #e5e5e5;
-            padding: 12px;
-            text-align: center;
-        }
-        
-        .size-table th {
-            background-color: #f3f4f6;
-            font-weight: 500;
-        }
-        
-        .size-table tr:nth-child(even) {
-            background-color: #f9fafb;
-        }
-        
-        .size-table tr:hover {
-            background-color: #f3f4f6;
-        }
-        
-        .tables-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        
-        .table-wrapper {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .table-title {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            margin-bottom: 15px;
-            color: #701a75;
-            font-size: 1.25rem;
-        }
-        
-        /* Modal de confirmação */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-        
-        .modal-content {
-            background-color: white;
-            margin: 15% auto;
-            padding: 20px;
-            border-radius: 8px;
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        
-        .close-btn {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .close-btn:hover {
-            color: black;
-        }
-        
-        /* Estilo para o quadro branco */
-        .highlight-box {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 600px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border: 2px solid #f3f4f6;
-        }
-        
-        .highlight-text {
-            font-size: 1.25rem;
-            color: #701a75;
-            font-weight: 500;
-        }
-        
-        .logo-img {
-            height: 50px;
-            margin-right: 15px;
-        }
-    </style>
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #d946ef;
+      /* Cor de fundo fúchsia */
+    }
+
+    .title-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .sewing-pattern {
+      background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%23e5e5e5" stroke-width="1"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23e5e5e5" stroke-width="0.5"/></svg>');
+      background-size: 20px 20px;
+      background-color: #d946ef;
+      /* Cor de fundo fúchsia */
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .size-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .size-table th,
+    .size-table td {
+      border: 1px solid #e5e5e5;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .size-table th {
+      background-color: #f3f4f6;
+      font-weight: 500;
+    }
+
+    .size-table tr:nth-child(even) {
+      background-color: #f9fafb;
+    }
+
+    .size-table tr:hover {
+      background-color: #f3f4f6;
+    }
+
+    .tables-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .table-wrapper {
+      flex: 1;
+      min-width: 300px;
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-title {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #701a75;
+      font-size: 1.25rem;
+    }
+
+    /* Modal de confirmação */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: black;
+    }
+
+    /* Estilo para o quadro branco */
+    .highlight-box {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: 2px solid #f3f4f6;
+    }
+
+    .highlight-text {
+      font-size: 1.25rem;
+      color: #701a75;
+      font-weight: 500;
+    }
+
+    .logo-img {
+      margin-top: 6%;
+      height: 50px;
+      margin-right: 15px;
+    }
+  </style>
 </head>
+
 <body class="sewing-pattern">
-    <!-- Cabeçalho -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-4 md:mb-0">
-                    <img src="https://i.imgur.com/xfyr47x.png" alt="Félix Cases Logo" class="logo-img">
-                    <h1 class="title-font text-3xl md:text-4xl text-gray-800">Félix Cases</h1>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="#contato" class="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-4 py-2 rounded-full transition duration-300">
-                        <i class="fas fa-envelope mr-2"></i>Contato
-                    </a>
-                </div>
-            </div>
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <img src="https://i.imgur.com/xfyr47x.png" alt="Félix Cases Logo" class="logo-img">
+          <h1 class="title-font text-3xl md:text-4xl text-gray-800">Félix Cases</h1>
         </div>
-    </header>
-
-    <!-- Banner Principal -->
-    <section class="bg-gradient-to-r from-fuchsia-400 to-fuchsia-500 py-12">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="title-font text-4xl md:text-5xl text-white mb-4">Cases Personalizados</h2>
-            <p class="text-xl text-white max-w-3xl mx-auto">
-                Proteção e estilo com cases feitos sob medida para suas necessidades
-            </p>
+        <div class="flex items-center space-x-4">
+          <a href="#contato"
+            class="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-4 py-2 rounded-full transition duration-300">
+            <i class="fas fa-envelope mr-2"></i>Contato
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <!-- Catálogo de Tamanhos -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="title-font text-3xl md:text-4xl text-white mb-4">Nossos Tamanhos Padrão</h2>
-                <div class="w-24 h-1 bg-white mx-auto"></div>
-                <p class="text-white mt-4 max-w-2xl mx-auto">
-                    Confira abaixo nossa tabela de tamanhos e valores. Para medidas especiais, solicite orçamento.
-                </p>
-            </div>
-            
-            <div class="tables-container mb-16">
-                <!-- Tabela de Couro Ecológico -->
-                <div class="table-wrapper">
-                    <h3 class="table-title">Couro Ecológico</h3>
-                    <div class="overflow-x-auto">
-                        <table class="size-table">
-                            <thead>
-                                <tr>
-                                    <th>Tamanho (cm)</th>
-                                    <th>Preço</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15 x 8</td>
-                                    <td>R$ 20,00</td>
-                                </tr>
-                                <tr>
-                                    <td>20 x 12</td>
-                                    <td>R$ 30,00</td>
-                                </tr>
-                                <tr>
-                                    <td>25 x 12</td>
-                                    <td>R$ 32,00</td>
-                                </tr>
-                                <tr>
-                                    <td>30 x 12</td>
-                                    <td>R$ 34,00</td>
-                                </tr>
-                                <tr>
-                                    <td>35 x 12</td>
-                                    <td>R$ 36,00</td>
-                                </tr>
-                                <tr>
-                                    <td>40 x 12</td>
-                                    <td>R$ 38,00</td>
-                                </tr>
-                                <tr>
-                                    <td>45 x 12</td>
-                                    <td>R$ 40,00</td>
-                                </tr>
-                                <tr>
-                                    <td>50 x 12</td>
-                                    <td>R$ 42,00</td>
-                                </tr>
-                                <tr>
-                                    <td>55 x 12</td>
-                                    <td>R$ 44,00</td>
-                                </tr>
-                                <tr>
-                                    <td>60 x 12</td>
-                                    <td>R$ 46,00</td>
-                                </tr>
-                                <tr>
-                                    <td>65 x 12</td>
-                                    <td>R$ 48,00</td>
-                                </tr>
-                                <tr>
-                                    <td>70 x 12</td>
-                                    <td>R$ 50,00</td>
-                                </tr>
-                                <tr>
-                                    <td>Demais tamanhos</td>
-                                    <td>Orçamento</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-                <!-- Tabela de Tecido -->
-                <div class="table-wrapper">
-                    <h3 class="table-title">Tecido</h3>
-                    <div class="overflow-x-auto">
-                        <table class="size-table">
-                            <thead>
-                                <tr>
-                                    <th>Tamanho (cm)</th>
-                                    <th>Preço</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>15 x 8</td>
-                                    <td>R$ 18,00</td>
-                                </tr>
-                                <tr>
-                                    <td>20 x 12</td>
-                                    <td>R$ 28,00</td>
-                                </tr>
-                                <tr>
-                                    <td>25 x 12</td>
-                                    <td>R$ 30,00</td>
-                                </tr>
-                                <tr>
-                                    <td>30 x 12</td>
-                                    <td>R$ 32,00</td>
-                                </tr>
-                                <tr>
-                                    <td>35 x 12</td>
-                                    <td>R$ 34,00</td>
-                                </tr>
-                                <tr>
-                                    <td>40 x 12</td>
-                                    <td>R$ 36,00</td>
-                                </tr>
-                                <tr>
-                                    <td>45 x 12</td>
-                                    <td>R$ 38,00</td>
-                                </tr>
-                                <tr>
-                                    <td>50 x 12</td>
-                                    <td�>R$ 40,00</td>
-                                </tr>
-                                <tr>
-                                    <td>55 x 12</td>
-                                    <td>R$ 42,00</td>
-                                </tr>
-                                <tr>
-                                    <td>60 x 12</td>
-                                    <td>R$ 44,00</td>
-                                </tr>
-                                <tr>
-                                    <td>65 x 12</td>
-                                    <td>R$ 46,00</td>
-                                </tr>
-                                <tr>
-                                    <td>70 x 12</td>
-                                    <td>R$ 48,00</td>
-                                </tr>
-                                <tr>
-                                    <td>Demais tamanhos</td>
-                                    <td>Orçamento</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+  <!-- Banner Principal -->
+  <section class="bg-gradient-to-r from-fuchsia-400 to-fuchsia-500 py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="title-font text-4xl md:text-5xl text-white mb-4">Cases Personalizados</h2>
+      <p class="text-xl text-white max-w-3xl mx-auto">
+        Proteção e estilo com cases feitos sob medida para suas necessidades
+      </p>
+    </div>
+  </section>
 
-            <!-- Adicionando a frase solicitada em um quadro branco -->
-            <div class="highlight-box">
-                <p class="highlight-text">
-                    <i class="fas fa-info-circle mr-2"></i> Para cases personalizadas com a sua logo, consultar valores
-                </p>
-            </div>
-            
-            <!-- Galeria de Cases (12 espaços) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Case 1 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/Gjsh9bs.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 2 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/TYRGHK5.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 3 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/puXJbwt.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 4 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/ZbISAad.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
+  <!-- Catálogo de Tamanhos -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="title-font text-3xl md:text-4xl text-white mb-4">Nossos Tamanhos Padrão</h2>
+        <div class="w-24 h-1 bg-white mx-auto"></div>
+        <p class="text-white mt-4 max-w-2xl mx-auto">
+          Confira abaixo nossa tabela de tamanhos e valores. Para medidas especiais, solicite orçamento.
+        </p>
+      </div>
 
-                <!-- Case 5 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/nfXyxGR.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 6 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/yG3FnGd.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 7 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/SqCo2uH.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 8 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/n0MGwJE.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 9 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/oI7cShb.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 10 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/rDizpmR.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 11 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/uLiFlKc.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-                
-                <!-- Case 12 -->
-                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="relative">
-                        <img src="https://i.imgur.com/ZVmjey3.jpeg" alt="Case" class="w-full h-64 object-cover">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Espaço para contato -->
-            <div class="mt-16 text-center">
-                <a href="#contato" class="bg-white hover:bg-gray-100 text-fuchsia-600 px-8 py-3 rounded-md text-lg transition duration-300 inline-block">
-                    <i class="fas fa-envelope mr-2"></i>Entre em contato para encomendar
-                </a>
-            </div>
+      <div class="tables-container mb-16">
+        <!-- Tabela de Couro Ecológico -->
+        <div class="table-wrapper">
+          <h3 class="table-title">Couro Ecológico</h3>
+          <div class="overflow-x-auto">
+            <table class="size-table">
+              <thead>
+                <tr>
+                  <th>Tamanho (cm)</th>
+                  <th>Preço</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>15 x 8</td>
+                  <td>R$ 20,00</td>
+                </tr>
+                <tr>
+                  <td>20 x 12</td>
+                  <td>R$ 30,00</td>
+                </tr>
+                <tr>
+                  <td>25 x 12</td>
+                  <td>R$ 32,00</td>
+                </tr>
+                <tr>
+                  <td>30 x 12</td>
+                  <td>R$ 34,00</td>
+                </tr>
+                <tr>
+                  <td>35 x 12</td>
+                  <td>R$ 36,00</td>
+                </tr>
+                <tr>
+                  <td>40 x 12</td>
+                  <td>R$ 38,00</td>
+                </tr>
+                <tr>
+                  <td>45 x 12</td>
+                  <td>R$ 40,00</td>
+                </tr>
+                <tr>
+                  <td>50 x 12</td>
+                  <td>R$ 42,00</td>
+                </tr>
+                <tr>
+                  <td>55 x 12</td>
+                  <td>R$ 44,00</td>
+                </tr>
+                <tr>
+                  <td>60 x 12</td>
+                  <td>R$ 46,00</td>
+                </tr>
+                <tr>
+                  <td>65 x 12</td>
+                  <td>R$ 48,00</td>
+                </tr>
+                <tr>
+                  <td>70 x 12</td>
+                  <td>R$ 50,00</td>
+                </tr>
+                <tr>
+                  <td>Demais tamanhos</td>
+                  <td>Orçamento</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-    </section>
 
-    <!-- Contato -->
-    <section id="contato" class="py-16 bg-fuchsia-700">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="title-font text-3xl text-white mb-4">Encomende seu Case</h2>
-                <p class="text-white max-w-2xl mx-auto">
-                    Entre em contato para solicitar seu case no tamanho desejado ou tirar dúvidas sobre nossos produtos.
-                </p>
+        <!-- Tabela de Tecido -->
+        <div class="table-wrapper">
+          <h3 class="table-title">Tecido</h3>
+          <div class="overflow-x-auto">
+            <table class="size-table">
+              <thead>
+                <tr>
+                  <th>Tamanho (cm)</th>
+                  <th>Preço</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>15 x 8</td>
+                  <td>R$ 18,00</td>
+                </tr>
+                <tr>
+                  <td>20 x 12</td>
+                  <td>R$ 28,00</td>
+                </tr>
+                <tr>
+                  <td>25 x 12</td>
+                  <td>R$ 30,00</td>
+                </tr>
+                <tr>
+                  <td>30 x 12</td>
+                  <td>R$ 32,00</td>
+                </tr>
+                <tr>
+                  <td>35 x 12</td>
+                  <td>R$ 34,00</td>
+                </tr>
+                <tr>
+                  <td>40 x 12</td>
+                  <td>R$ 36,00</td>
+                </tr>
+                <tr>
+                  <td>45 x 12</td>
+                  <td>R$ 38,00</td>
+                </tr>
+                <tr>
+                  <td>50 x 12</td>
+                  <td�>R$ 40,00</td>
+                </tr>
+                <tr>
+                  <td>55 x 12</td>
+                  <td>R$ 42,00</td>
+                </tr>
+                <tr>
+                  <td>60 x 12</td>
+                  <td>R$ 44,00</td>
+                </tr>
+                <tr>
+                  <td>65 x 12</td>
+                  <td>R$ 46,00</td>
+                </tr>
+                <tr>
+                  <td>70 x 12</td>
+                  <td>R$ 48,00</td>
+                </tr>
+                <tr>
+                  <td>Demais tamanhos</td>
+                  <td>Orçamento</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adicionando a frase solicitada em um quadro branco -->
+      <div class="highlight-box">
+        <p class="highlight-text">
+          <i class="fas fa-info-circle mr-2"></i> Para cases personalizadas com a sua logo, consultar valores
+        </p>
+      </div>
+
+      <!-- Galeria de Cases (12 espaços) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Case 1 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/Gjsh9bs.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/TYRGHK5.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/puXJbwt.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/ZbISAad.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+
+        <!-- Case 5 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/nfXyxGR.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 6 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/yG3FnGd.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 7 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/SqCo2uH.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 8 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/n0MGwJE.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 9 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/oI7cShb.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 10 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/rDizpmR.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 11 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/uLiFlKc.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+
+        <!-- Case 12 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+          <div class="relative">
+            <img src="https://i.imgur.com/ZVmjey3.jpeg" alt="Case" class="w-full h-64 object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Espaço para contato -->
+      <div class="mt-16 text-center">
+        <a href="#contato"
+          class="bg-white hover:bg-gray-100 text-fuchsia-600 px-8 py-3 rounded-md text-lg transition duration-300 inline-block">
+          <i class="fas fa-envelope mr-2"></i>Entre em contato para encomendar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-16 bg-fuchsia-700">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="title-font text-3xl text-white mb-4">Encomende seu Case</h2>
+        <p class="text-white max-w-2xl mx-auto">
+          Entre em contato para solicitar seu case no tamanho desejado ou tirar dúvidas sobre nossos produtos.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 bg-fuchsia-800 text-white p-8">
+            <h3 class="title-font text-2xl mb-6">Informações de Contato</h3>
+            <div class="mb-6">
+              <div class="flex items-start mb-4">
+                <i class="fas fa-phone-alt mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium">Telefone</h4>
+                  <p class="text-fuchsia-200">(17) 99634-6140</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium">Email</h4>
+                  <p class="text-fuchsia-200">felixcases77@gmail.com</p>
+                </div>
+              </div>
             </div>
-            
-            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 bg-fuchsia-800 text-white p-8">
-                        <h3 class="title-font text-2xl mb-6">Informações de Contato</h3>
-                        <div class="mb-6">
-                            <div class="flex items-start mb-4">
-                                <i class="fas fa-phone-alt mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium">Telefone</h4>
-                                    <p class="text-fuchsia-200">(17) 99634-6140</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-envelope mt-1 mr-4"></i>
-                                <div>
-                                    <h4 class="font-medium">Email</h4>
-                                    <p class="text-fuchsia-200">felixcases77@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://www.instagram.com/felix_cases77?igsh=MXFxazg3dG1hdXI1ZQ==" class="bg-white text-fuchsia-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-fuchsia-600 hover:text-white transition duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.facebook.com/share/19XiK7Am1f/?mibextid=wwXIfr" class="bg-white text-fuchsia-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-fuchsia-600 hover:text-white transition duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://wa.me/5517996346140" class="bg-white text-fuchsia-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-fuchsia-600 hover:text-white transition duration-300">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 p-8">
-                        <form id="contactForm">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 mb-2">Nome</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-500" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 mb-2">Email</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-500" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
-                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-500" required></textarea>
-                            </div>
-                            <button type="submit" class="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-6 py-2 rounded-md transition duration-300 w-full">
+            <div class="flex space-x-4">
+              <a href="https://www.instagram.com/felix_cases77?igsh=MXFxazg3dG1hdXI1ZQ=="
+                class="bg-white text-fuchsia-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-fuchsia-600 hover:text-white transition duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/share/19XiK7Am1f/?mibextid=wwXIfr"
+                class="bg-white text-fuchsia-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-fuchsia-600 hover:text-white transition duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://wa.me/5517996346140"
+                class="bg-white text-fuchsia-600 p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-fuchsia-600 hover:text-white transition duration-300">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <form id="contactForm">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-500" required>
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-500" required>
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-500" required></textarea>
+              </div>
+              <button type="submit" class="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-6 py-2 rounded-md transition duration-300 w-full">
                                 Enviar Mensagem
                             </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            </form>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Modal de Confirmação -->
-    <div id="confirmationModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3 class="title-font text-xl mb-4">Mensagem Enviada!</h3>
-            <p>Sua mensagem foi enviada com sucesso para felixcases77@gmail.com.</p>
-            <p class="mt-4">Entraremos em contato em breve.</p>
-            <button id="closeModalBtn" class="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-6 py-2 rounded-md transition duration-300 mt-4">
+  <!-- Modal de Confirmação -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3 class="title-font text-xl mb-4">Mensagem Enviada!</h3>
+      <p>Sua mensagem foi enviada com sucesso para felixcases77@gmail.com.</p>
+      <p class="mt-4">Entraremos em contato em breve.</p>
+      <button id="closeModalBtn" class="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-6 py-2 rounded-md transition duration-300 mt-4">
                 Fechar
             </button>
-        </div>
     </div>
+  </div>
 
-    <!-- Rodapé -->
-    <footer class="bg-fuchsia-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex items-center justify-center mb-4">
-                <img src="https://i.imgur.com/9pp9xou.png" alt="Félix Cases Logo" class="logo-img" style="filter: brightness(0) invert(1);">
-                <h2 class="title-font text-xl">Félix Cases</h2>
-            </div>
-            <p class="text-fuchsia-300 text-sm">&copy; 2023 Félix Cases. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <!-- Rodapé -->
+  <footer class="bg-fuchsia-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex items-center justify-center mb-4">
+        <img src="https://i.imgur.com/9pp9xou.png" alt="Félix Cases Logo" class="logo-img" style="filter: brightness(0) invert(1);">
+        <h2 class="title-font text-xl">Félix Cases</h2>
+      </div>
+      <p class="text-fuchsia-300 text-sm">&copy; 2023 Félix Cases. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-    <script>
-        // Efeito de rolagem suave para links internos
+  <script>
+    // Efeito de rolagem suave para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -609,6 +620,7 @@
                 modal.style.display = 'none';
             }
         }
-    </script>
+  </script>
 </body>
+
 </html>
