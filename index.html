@@ -51,18 +51,6 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
         
-        .sewing-machine-icon {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M5 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4l-2-2V6a2 2 0 0 0-2-2H5zm0 2h14v4h-1l-1 1H8l-1 1H5V6zm0 6v6h14v-2l-1-1H8l-1 1H5v-2zm4 0a1 1 0 1 1 0 2 1 1 0 0 0 1 0-2z"/></svg>');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-        
         .size-table {
             width: 100%;
             border-collapse: collapse;
@@ -163,6 +151,11 @@
             color: #701a75;
             font-weight: 500;
         }
+        
+        .logo-img {
+            height: 50px;
+            margin-right: 15px;
+        }
     </style>
 </head>
 <body class="sewing-pattern">
@@ -171,8 +164,8 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-4 md:mb-0">
-                    <div class="sewing-machine-icon"></div>
-                    <h1 class="title-font text-3xl md:text-4xl text-gray-800 ml-2">Félix Cases</h1>
+                    <img src="https://i.imgur.com/xfyr47x.png" alt="Félix Cases Logo" class="logo-img">
+                    <h1 class="title-font text-3xl md:text-4xl text-gray-800">Félix Cases</h1>
                 </div>
                 <div class="flex items-center space-x-4">
                     <a href="#contato" class="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-4 py-2 rounded-full transition duration-300">
@@ -316,7 +309,7 @@
                                 </tr>
                                 <tr>
                                     <td>50 x 12</td>
-                                    <td>R$ 40,00</td>
+                                    <td�>R$ 40,00</td>
                                 </tr>
                                 <tr>
                                     <td>55 x 12</td>
@@ -531,8 +524,8 @@
     <footer class="bg-fuchsia-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <div class="flex items-center justify-center mb-4">
-                <div class="sewing-machine-icon" style="filter: invert(1);"></div>
-                <h2 class="title-font text-xl ml-2">Félix Cases</h2>
+                <img src="https://i.imgur.com/9pp9xou.png" alt="Félix Cases Logo" class="logo-img" style="filter: brightness(0) invert(1);">
+                <h2 class="title-font text-xl">Félix Cases</h2>
             </div>
             <p class="text-fuchsia-300 text-sm">&copy; 2023 Félix Cases. Todos os direitos reservados.</p>
         </div>
